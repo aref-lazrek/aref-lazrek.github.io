@@ -2509,3 +2509,10 @@ img.svg {
     float: none;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .xd-d-block {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
