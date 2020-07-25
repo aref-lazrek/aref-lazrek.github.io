@@ -1775,3 +1775,9 @@ img.svg{
 	.edina_tm_main_demos_list_wrap ul li{width: 100%;padding: 0px;}
 	.container{padding: 0px 20px !important;}
 }
+
+.author_wrap .center-about{
+	text-align: center;
+	float: none;
+	width: 100%;
+}
