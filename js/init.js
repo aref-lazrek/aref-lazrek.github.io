@@ -8,17 +8,14 @@
 jQuery(document).ready(function(){
 
 	"use strict";
-	
-	
-	
+
+
+
 	// here all ready functions
-	
+
 	edina_tm_hamburger();
 	edina_tm_imgtosvg();
-	edina_tm_magnific_popup();
 	edina_tm_jarallax();
-	edina_tm_portfolio();
-	edina_tm_portfolio_animation();
 	edina_tm_totop();
 	edina_tm_totop_myhide();
 	edina_tm_nav_bg_scroll();
@@ -30,13 +27,17 @@ jQuery(document).ready(function(){
 	edina_tm_popupscroll();
 	edina_tm_popup_blog();
 
-	
+	jQuery(window).on('load', function () {
+		edina_tm_portfolio();
+		edina_tm_portfolio_animation();
+		edina_tm_magnific_popup();
+	});
 	jQuery(window).on('scroll',function(){
 		//e.preventDefault();
 		edina_tm_totop_myhide();
 		edina_tm_nav_bg_scroll();
 	});
-	
+
 });
 
 // -----------------------------------------------------
@@ -48,11 +49,11 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 function edina_tm_imgtosvg(){
-	
+
 	"use strict";
-	
+
 	jQuery('img.svg').each(function(){
-		
+
 		var jQueryimg 		= jQuery(this);
 		var imgClass		= jQueryimg.attr('class');
 		var imgURL			= jQueryimg.attr('src');
@@ -82,15 +83,15 @@ function edina_tm_imgtosvg(){
 // -----------------------------------------------------
 
 function edina_tm_hamburger(){
-	
+
 	"use strict";
-	
+
 	var hamburger 		= jQuery('.hamburger');
 	var mobileMenu		= jQuery('.edina_tm_mobile_menu_wrap');
-	
+
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
-		
+
 		if(element.hasClass('is-active')){
 			element.removeClass('is-active');
 			mobileMenu.slideUp();
@@ -107,14 +108,14 @@ function edina_tm_hamburger(){
 // -----------------------------------------------------
 
 function edina_tm_magnific_popup(){
-	
+
 	"use strict";
-	
+
 	jQuery('.open-popup-link').magnificPopup({
 		type:'inline',
 		midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
-	
+
 	jQuery('.gallery').each(function() { // the containers for all your galleries
 		jQuery(this).magnificPopup({
 			delegate: 'a', // the selector for gallery item
@@ -134,7 +135,7 @@ function edina_tm_magnific_popup(){
 			removalDelay: 300,
 			mainClass: 'mfp-fade'
 		});
-		
+
 	});
 	jQuery('.popup-youtube').each(function() { // the containers for all your galleries
 		jQuery(this).magnificPopup({
@@ -154,19 +155,19 @@ function edina_tm_magnific_popup(){
 // -----------------------------------------------------
 
 function edina_tm_jarallax(){
-	
+
 	"use strict";
-	
+
 	jQuery('.jarallax').each(function(){
 		var element			= jQuery(this);
 		var	customSpeed		= element.data('speed');
-		
+
 		if(customSpeed !== "undefined" && customSpeed !== ""){
 			customSpeed = customSpeed;
 		}else{
 			customSpeed 	= 0.5;
 		}
-		
+
 		element.jarallax({
 			speed: customSpeed
 		});
@@ -177,7 +178,7 @@ function edina_tm_jarallax(){
 // -----------------    PORTFOLIO    ---------------
 // -------------------------------------------------
 
-// filterable 
+// filterable
 
 function edina_tm_portfolio(){
 
@@ -190,10 +191,10 @@ function edina_tm_portfolio(){
 		var filter		 = jQuery('.edina_tm_portfolio_filter');
 
 		if(filter.length){
-			// Isotope Filter 
+			// Isotope Filter
 			filter.find('a').on('click', function(){
 				var selector = jQuery(this).attr('data-filter');
-				list.isotope({ 
+				list.isotope({
 					filter				: selector,
 					animationOptions	: {
 						duration			: 750,
@@ -202,31 +203,31 @@ function edina_tm_portfolio(){
 					}
 				});
 				return false;
-			});	
+			});
 
 			// Change active element class
 			filter.find('a').on('click', function() {
 				filter.find('a').removeClass('current');
 				jQuery(this).addClass('current');
 				return false;
-			});	
+			});
 		}
 	}
 }
 
 function edina_tm_portfolio_animation(){
-	
+
 	"use strict";
-	
+
 	var list			= jQuery('.edina_tm_portfolio_list > li');
-	
+
 	list.each(function(){
 		var el			= jQuery(this);
 		var el2			= el.find('.list_inner');
 		var image		= el.find('.image_wrap');
 		var definition	= el.find('.definition_portfolio');
 		var definitionH	= el.find('.definition_portfolio').outerHeight();
-		
+
 		el2.each(function(){
 			var el3			= jQuery(this);
 			el3.on('mouseenter',function(){
@@ -236,7 +237,7 @@ function edina_tm_portfolio_animation(){
 				image.css({top:0});
 				definition.css({marginTop:0});
 			});
-			
+
 		});
 	});
 }
@@ -246,26 +247,26 @@ function edina_tm_portfolio_animation(){
 // -----------------------------------------------------
 
 function edina_tm_totop(){
-	
+
 	"use strict";
-	
+
 	jQuery(".edina_tm_to_top_wrap").on('click', function(e) {
-		e.preventDefault();		
+		e.preventDefault();
 		jQuery("html, body").animate({ scrollTop: 0 }, 'slow');
 		return false;
 	});
 }
 
 function edina_tm_totop_myhide(){
-	
+
 	"use strict";
-	
+
 	var toTop			=jQuery(".edina_tm_to_top_wrap");
 	if(toTop.length){
 		var topOffSet 	=toTop.offset().top;
-		
+
 		if(topOffSet > 1350){
-			toTop.addClass('opened');	
+			toTop.addClass('opened');
 		}else{
 			toTop.removeClass('opened');
 		}
@@ -277,23 +278,23 @@ function edina_tm_totop_myhide(){
 // -----------------------------------------------------
 
 function edina_tm_nav_bg_scroll(){
-	
+
 	"use strict";
-	
+
 	var header 			= jQuery('.edina_tm_header');
 	var windowScroll	= jQuery(window).scrollTop();
 	var W				= jQuery(window).width();
-	
+
 	if(W>1040){
 		jQuery(window).scroll(function(){
             if(windowScroll >= '100'){
                 header.addClass('scroll');
             }
             else{
-                header.removeClass('scroll');  
+                header.removeClass('scroll');
             }
         });
-	} 
+	}
 }
 
 // -----------------------------------------------------
@@ -301,13 +302,13 @@ function edina_tm_nav_bg_scroll(){
 // -----------------------------------------------------
 
 function edina_tm_anchor(){
-	
+
 	"use strict";
-	
+
 	jQuery('.anchor_nav').onePageNav();
-	
+
 	var scrollOffset = 0;
-	
+
 	jQuery(".anchor a").on('click', function(evn){
 		evn.preventDefault();
 		jQuery('html,body').scrollTo(this.hash, this.hash, {
@@ -317,7 +318,7 @@ function edina_tm_anchor(){
 				easing: "easeInOutExpo"
 			}
 		});
-		return false;	
+		return false;
 	});
 }
 
@@ -326,44 +327,44 @@ function edina_tm_anchor(){
 // -----------------------------------------------------
 
 function edina_tm_contact_form(){
-	
+
 	"use strict";
-	
+
 	jQuery(".contact_form #send_message").on('click', function(){
-		
+
 		var name 		= jQuery(".contact_form #name").val();
 		var email 		= jQuery(".contact_form #email").val();
 		var message 	= jQuery(".contact_form #message").val();
 		var subject 	= jQuery(".contact_form #subject").val();
 		var success     = jQuery(".contact_form .returnmessage").data('success');
-	
+
 		jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
-		//checking for blank fields	
+		//checking for blank fields
 		if(name===''||email===''||message===''){
-			
+
 			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
 			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
-				
+
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
-				
-				
+
+
 				if(jQuery(".contact_form .returnmessage span.contact_error").length){
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);		
+					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
 				}else{
 					jQuery(".contact_form .returnmessage").append("<span class='contact_success'>"+ success +"</span>");
 					jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
 				}
-				
+
 				if(data===""){
 					jQuery("#contact_form")[0].reset();//To reset form fields on success
 				}
-				
+
 			});
 		}
-		return false; 
+		return false;
 	});
 }
 
@@ -372,9 +373,9 @@ function edina_tm_contact_form(){
 // -----------------------------------------------------
 
 function edina_tm_owl_carousel(){
-	
+
 	"use strict";
-	
+
 	var carusel2			= jQuery('.edina_tm_testimonial_wrap .owl-carousel');
   	carusel2.owlCarousel({
 		loop:true,
@@ -393,7 +394,7 @@ function edina_tm_owl_carousel(){
 			1920:{items:3}
 		}
 	});
-	
+
 	var carusel3			= jQuery('.edina_tm_partners_wrap .owl-carousel');
   	carusel3.owlCarousel({
 		loop:true,
@@ -425,16 +426,16 @@ function edina_tm_owl_carousel(){
 // -----------------------------------------------------
 
 function edina_tm_text_animation(){
-	
+
 	"use strict";
-	
+
 	var H        			= jQuery(window).height();
 	var titleHolder			= jQuery('.edina_tm_universal_box_wrap .hero_title');
 	var titleHeight			= titleHolder.outerHeight();
 	var headerHeight		= jQuery('.edina_tm_header').outerHeight();
-	
+
 	var	height				= H/2 + titleHeight/2 - headerHeight;
-	
+
 	jQuery(window).on('scroll',function(){
 		var window_offset = jQuery(window).scrollTop();
 		titleHolder.css({opacity:1 - (window_offset/height), marginTop:(window_offset/height)*200});
@@ -446,11 +447,11 @@ function edina_tm_text_animation(){
 // -------------------------------------------------
 
 function edina_tm_animate_text(){
-	
+
 	"use strict";
-	
+
 	var animateSpan			= jQuery('.edina_tm_animation_text_word');
-	
+
 		animateSpan.typed({
 			strings: ["GRAPHIC DESIGNER", "PHOTOGRAPHER", "WEB DEVELOPER"],
 			loop: true,
@@ -469,7 +470,7 @@ function edina_tm_popup_blog(){
 	var popupBox		= jQuery('#edina_tm_popup_blog');
 	var popupInner		= popupBox.find('.inner_popup');
 	var closePopup		= popupBox.find('.close');
-	
+
 	li.each(function(){
 		var element		= jQuery(this);
 		var button		= element.find('.read_more a,.title_holder a,.link_news');
@@ -478,7 +479,7 @@ function edina_tm_popup_blog(){
 		var imgData		= mainImage.data('url');
 		var title		= element.find('.title_holder h3');
 		var titleHref	= element.find('.title_holder h3 a').html();
-		
+
 		mainImage.css({backgroundImage: 'url('+imgData+')'});
 		button.on('click',function(){
 			popupBox.addClass('opened');
@@ -502,22 +503,22 @@ function edina_tm_popup_blog(){
 // -----------------------------------------------------
 
 function edina_tm_popupscroll(){
-	
+
 	"use strict";
-	
+
 	var H				= jQuery(window).height();
 	var scrollable		= jQuery('.scrollable');
-	
+
 	var popupBox		= jQuery('.edina_tm_popup_blog .inner_popup');
-	
+
 	popupBox.css({height:H-100});
-	
+
 	scrollable.each(function(){
 		var element		= jQuery(this);
 		var wH			= jQuery(window).height();
-		
+
 		element.css({height: wH-100});
-		
+
 		element.niceScroll({
 			touchbehavior:false,
 			cursorwidth:0,
