@@ -1234,30 +1234,6 @@ img.svg {
     background-position: center;
 }
 
-.edina_tm_portfolio_list > li:nth-child(1) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/1.jpg);
-}
-
-.edina_tm_portfolio_list > li:nth-child(2) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/2.jpg);
-}
-
-.edina_tm_portfolio_list > li:nth-child(3) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/3.jpg);
-}
-
-.edina_tm_portfolio_list > li:nth-child(4) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/4.jpg);
-}
-
-.edina_tm_portfolio_list > li:nth-child(5) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/5.jpg);
-}
-
-.edina_tm_portfolio_list > li:nth-child(6) .image_wrap .main_image {
-    background-image: url(..//img/portfolio/6.jpg);
-}
-
 .edina_tm_portfolio_list .list_inner .definition_portfolio {
     position: absolute;
     top: 100%;
@@ -2515,4 +2491,44 @@ img.svg {
         display: block;
         margin-bottom: 10px;
     }
+}
+
+.jquery-modal .modal {
+    padding: 0;
+    max-width: 100%;
+    border-radius: 0;
+}
+
+.modal .right {
+    float: right;
+    width: 49%;
+    padding: 25px 0;
+}
+
+.modal .left {
+    float: left;
+    width: 49%;
+    max-height: 700px;
+    overflow: auto;
+}
+
+.modal img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.jquery-modal.blocker {
+    top: 20px;
+}
+
+.modal p {
+    font-size: 15px;
+    line-height: 3;
+}
+
+.list_inner img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
 }

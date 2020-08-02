@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/plugins.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
     <!-- /STYLES -->
@@ -365,29 +366,45 @@
 
 </div>
 <!-- / WRAPPER ALL -->
-
+<div id="project-modal" class="modal">
+    <div class="right">
+        <h2>Project Name</h2>
+        <p><i class="fa fa-user"></i> Client: <span class="client"></span></p>
+        <p><i class="fa fa-link"></i> Link: <a href="#" class="link"></a></p>
+        <p><i class="fa fa-calendar"></i> Date: <span class="date"></span></p>
+        <p><i class="fa fa-tags"></i> Technologies: <span class="technologies"></span></p>
+        <p><i class="fa fa-list"></i> Description: <span class="description"></span></p>
+    </div>
+    <div class="left">
+        <img src="img/portfolio/placeholder.jpg" alt=""/>
+    </div>
+</div>
 <!-- SCRIPTS -->
 <script src="js/jquery.js"></script>
 <!--[if lt IE 10]>
-<script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+<script type="text/javascript" src="js/ie8.js"></script>
+<![endif]-->
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
 <script src="https://use.fontawesome.com/f3cfab67c8.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <!-- /SCRIPTS -->
 <script>
+    var jsonData = {};
     $.getJSON("js/portfolio.json", function (data) {
+        jsonData = data;
         var items = [];
         $.each(data, function (key, item) {
             items.push(
                 '<li>' +
                 '    <div class="list_inner">' +
-                '        <a class="zoom" href="img/portfolio/placeholder.jpg">' +
+                '        <a class="zoom" href="#" data-name="' + item.name + '">' +
                 '            <div class="image_wrap">' +
-                '                <img src="img/portfolio/placeholder-white.jpg" alt=""/>' +
+                '                <img src="' + item.image + '" alt=""/>' +
                 '                <div class="main_image"></div>' +
                 '            </div>' +
                 '            <div class="definition_portfolio">' +
-                '                <span class="first">'+ item.name +'</span>' +
+                '                <span class="first">' + item.name + '</span>' +
                 '            </div>' +
                 '        </a>' +
                 '    </div>' +
@@ -399,6 +416,27 @@
             "class": "edina_tm_portfolio_list gallery_zoom",
             html: items.join("")
         }).appendTo(".edina_tm_portfolio_wrap");
+    });
+
+    function loadProject(project) {
+        $("#project-modal h2").text(project.name);
+        $("#project-modal .client").text(project.client);
+        $("#project-modal .link").attr("href", project.link);
+        $("#project-modal .link").text(project.link);
+        $("#project-modal .date").text(project.date);
+        $("#project-modal .technologies").text(project.technologies);
+        $("#project-modal .description").text(project.description);
+        $("#project-modal img").attr("src", project.image);
+    }
+
+    $("#portfolio").on('click', '.zoom', function (event) {
+        const name = $(this).data('name');
+        const project = jsonData.find(function (p) {
+            return p.name === name;
+        });
+        loadProject(project);
+        $('#project-modal').modal();
+        return false;
     });
 </script>
 </body>

@@ -1,142 +1,209 @@
 [
   {
-    "name": "Amado perfume",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Blackeyes",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "World Publicity",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Project View",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Bijouterie Touati",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Basel Taxi Service",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Class quiz",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
     "name": "24OZKW",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "France Makkah",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "France Makkah App",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Mekkah Medina Travel",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Manasik",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Souqzones",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "Calame Production",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "CM Magazine",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
-  },
-  {
-    "name": "ITAstrolab",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
+    "description": "Cofee stands store",
+    "image": "img/portfolio/24ozkw/image.jpg",
+    "date": "2018",
+    "link": "https://24ozkw.com",
+    "client": "24ozkw - kuwait",
+    "technologies": "Php, Magento 2"
   },
   {
     "name": "Alohdah",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
+    "description": "Company accounting application",
+    "image": "img/portfolio/alohdah/image.jpg",
+    "date": "2017",
+    "link": "#Private",
+    "client": "Alohdah - Saudi Arabia",
+    "technologies": "Php, Symfony3"
   },
   {
-    "name": "Webbiz",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
+    "name": "Amado perfume",
+    "description": "Amado perfume store",
+    "image": "img/portfolio/amadoperfume/image.jpg",
+    "date": "2017",
+    "link": "https://amadoperfume.com",
+    "client": "Amado Perfume - Saudi Arabia",
+    "technologies": "Php, Magento 2"
   },
   {
-    "name": "Sis",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
+    "name": "Basel Taxi Service",
+    "description": "Private taxi service website",
+    "image": "img/portfolio/baseltaxiservice/image.jpeg",
+    "date": "2020",
+    "link": "https://baseltaxiservice.ch",
+    "client": "Basel taxi service - Switzerland",
+    "technologies": "Php, Wordpress"
+  },
+  {
+    "name": "Bijouterie Touati",
+    "description": "Jewelery store website",
+    "image": "img/portfolio/bijouterie-touati/image.jpg",
+    "date": "2020",
+    "link": "http://bijouterie-touati.com/",
+    "client": "Bijouterie Touati - Tunisia",
+    "technologies": "Php, Wordpress, Woocommerce"
+  },
+  {
+    "name": "Blackeyes",
+    "description": "Blackeyes perfume store",
+    "image": "img/portfolio/blackeyes/image.jpg",
+    "date": "2017",
+    "link": "https://blackeyes.com.sa",
+    "client": "Blackeyes - Saudi Arabia",
+    "technologies": "Php, Magento 1"
+  },
+  {
+    "name": "Calame Production",
+    "description": "Audio visual production company website",
+    "image": "img/portfolio/calameproduction/image.jpg",
+    "date": "2016",
+    "link": "https://calameproductions.com",
+    "client": "Calame productions - Switzerland",
+    "technologies": "Php, Drupal 8"
+  },
+  {
+    "name": "Class quiz",
+    "description": "Kids e-learning platform",
+    "image": "img/portfolio/classquiz/image.jpg",
+    "date": "2018",
+    "link": "https://classquiz.tn",
+    "client": "Envast - Tunisia",
+    "technologies": "Php, Laravel"
+  },
+  {
+    "name": "Class quiz App",
+    "description": "Kids e-learning platform",
+    "image": "img/portfolio/classquiz-app/image.jpg",
+    "date": "2018",
+    "link": "#Private",
+    "client": "Envast - Tunisia",
+    "technologies": "Angular 8, Laravel"
+  },
+  {
+    "name": "CM Magazine",
+    "description": "Relegious Magazine",
+    "image": "img/portfolio/cmmagazine/image.jpg",
+    "date": "2017",
+    "link": "https://cmmagazine.com",
+    "client": "CM magazine - France",
+    "technologies": "Php, Drupal 8"
+  },
+  {
+    "name": "France Makkah",
+    "description": "Travel agency website",
+    "image": "img/portfolio/francemakkah/image.jpg",
+    "date": "2017",
+    "link": "https://francemakkah.com",
+    "client": "AMB Travel - France",
+    "technologies": "Php, Symfony 3"
+  },
+  {
+    "name": "France Makkah App",
+    "description": "Cross platform booking mobile app",
+    "image": "img/portfolio/francemakkah-app/image.jpg",
+    "date": "2018",
+    "link": "https://play.google.com/store/apps/details?id=com.francemakkah.app",
+    "client": "AMB Travel - France",
+    "technologies": "Angular, Ionic 3"
+  },
+  {
+    "name": "ITAstrolab",
+    "description": "Web development company website",
+    "image": "img/portfolio/itastrolab/image.jpg",
+    "date": "2016",
+    "link": "https://itastrolab.fr",
+    "client": "ITAstrolab - France",
+    "technologies": "Javascript"
+  },
+  {
+    "name": "JawalChat",
+    "description": "Chat app",
+    "image": "img/portfolio/jawalchat/image.jpg",
+    "date": "2016",
+    "link": "https://www.jawalchat.com/",
+    "client": "Alkhleg - Saudi Arabia",
+    "technologies": "Nodejs, ExpressJs, SocketIo, Redis"
   },
   {
     "name": "Kifi Kifek",
-    "description": "",
-    "thumbnail": "",
-    "image": "",
-    "date": ""
+    "description": "Association website",
+    "image": "img/portfolio/kifi-kifek/image.jpg",
+    "date": "2020",
+    "link": "https://kifi-kifek.tn/",
+    "client": "Tamss - Tunisia",
+    "technologies": "Angular 9, Laravel"
+  },
+  {
+    "name": "Manasik",
+    "description": "Travel agency website",
+    "image": "img/portfolio/manasik/image.jpg",
+    "date": "2016",
+    "link": "https://manasik.ch/",
+    "client": "Manasik - Switzerland",
+    "technologies": "Php, Symfony 3"
+  },
+  {
+    "name": "Mekkah Medina Travel",
+    "description": "Travel agency website",
+    "image": "img/portfolio/mekkahmedinatravel/image.jpg",
+    "date": "2017",
+    "link": "https://mekkahmedinatravel.fr/",
+    "client": "Mekkah Medina Travel - France",
+    "technologies": "Php, Symfony 3"
+  },
+  {
+    "name": "Mekkah Medina Travel - Refonte",
+    "description": "Travel agency website",
+    "image": "img/portfolio/mekkahmedinatravel-refonte/image.jpg",
+    "date": "2018",
+    "link": "https://mekkahmedinatravel.fr/",
+    "client": "Mekkah Medina Travel - France",
+    "technologies": "Php, Symfony 3"
+  },
+  {
+    "name": "Project View",
+    "description": "Digital marketing agency website",
+    "image": "img/portfolio/projectview/image.jpg",
+    "date": "2019",
+    "link": "https://www.projectview360.com/",
+    "client": "Project View - Switzerland",
+    "technologies": "Php, Laravel"
+  },
+  {
+    "name": "Scientific industries services",
+    "description": "Industrial equipment company",
+    "image": "img/portfolio/sis/image.jpg",
+    "date": "2014",
+    "link": "http://sis.com.tn",
+    "client": "SIS - Tunisia",
+    "technologies": "Javascript, Php"
+  },
+  {
+    "name": "Souqzones",
+    "description": "Delivery company",
+    "image": "img/portfolio/souqzones/image.jpg",
+    "date": "2018",
+    "link": "http://souqzones.com/",
+    "client": "Souqzones - Saudi Arabia",
+    "technologies": "Php, Laravel"
+  },
+  {
+    "name": "Takiacademy Analytics",
+    "description": "Analytics dashboard",
+    "image": "img/portfolio/takiacademy-analytics/image.jpg",
+    "date": "2019",
+    "link": "#Private",
+    "client": "Takiacademy - Tunisia",
+    "technologies": "Nodejs, ExpressJS, MongoDb, React, Laravel"
+  },
+  {
+    "name": "World Publicity",
+    "description": "Marketing company website",
+    "image": "img/portfolio/worldpublicity/image.jpg",
+    "date": "2015",
+    "link": "http://www.world-publicity.com/",
+    "client": "World Publicity - Tunisia",
+    "technologies": "Php, Wordpress"
   }
 ]

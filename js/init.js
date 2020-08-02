@@ -30,7 +30,6 @@ jQuery(document).ready(function(){
 	jQuery(window).on('load', function () {
 		edina_tm_portfolio();
 		edina_tm_portfolio_animation();
-		edina_tm_magnific_popup();
 	});
 	jQuery(window).on('scroll',function(){
 		//e.preventDefault();
